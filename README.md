@@ -1,6 +1,8 @@
 ## Projeto de chat via rádio frequência (2.4Ghz)
 
-O projeto em questão tem como objetivo dar suporte à troca de mensagens entre dispositivos. Para tal, são utilizados componentes acessíveis e de baixo custo.
+### Hot links: _<a href="https://github.com/sostenesg7/Chat-Radio-NodeMCU-Android/wiki/Componentes-Utilizados">Componentes Utilizados</a>_, _<a href="https://github.com/sostenesg7/Chat-Radio-NodeMCU-Android/wiki/Imagens-do-projeto">Imagens do Projeto</a>_
+
+O projeto em questão tem como objetivo dar suporte à troca de mensagens entre dispositivos. Para tal, são utilizados componentes acessíveis e de baixo custo, sendo investido aproximadamente _**R$ 60,26**_, sendo (**2xNRF24L01**, **2xModeMCU** e **2xCaregadores de bateria**).
 
 ## _**O processo de troca de mensagens se configura da seguinte maneira:**_
 
@@ -19,5 +21,5 @@ O projeto em questão tem como objetivo dar suporte à troca de mensagens entre 
 
 
 **Para mais informações sobre os componentes aqui utilizados, visite:**
-<a href="https://github.com/sostenesg7/Chat-Radio-NodeMCU-Android/wiki/Componentes-Utilizados">Componentes utilizados</a>
+<a href="Componentes-Utilizados">Componentes utilizados</a>
 
