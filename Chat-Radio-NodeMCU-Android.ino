@@ -1,56 +1,64 @@
 
-/*
-* Getting Started example sketch for nRF24L01+ radios
-* This is a very basic example of how to send data from one node to another
-* Updated: Dec 2014 by TMRh20
-*/
 
 #include <SPI.h>
 #include "RF24.h"
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
-/****************** User Config ***************************/
-/***      Set this radio as radio number 0 or 1         ***/
-bool radioNumber = 0;
+
 String lastMsg = "";
-/* Hardware configuration: Set up nRF24L01 radio on SPI bus plus pins 7 & 8 */
+/* Configuração da conexão com o rádio: CE =  D0 , CS = D1 */
 RF24 radio(D0, D1);
-/**********************************************************/
-const char *ssid = "NODE";
+//Quantidade de bytes a ser transmitido por vez
+//OBS: 32 é o máximo permitido pelo módulo NRF24L01
+#define PAYLOAD_SIZE 32
+byte addresses[][6] = {"RAD_0", "RAD_1"};
+/******************************************************
+
+MUITA ANTENÇÃO NO TRECHO DE CÓDIGO ABAIXO!!!
+
+******************************************************/
+#define RADIO_0 0
+#define RADIO_1 1
+//Especificação de qual dos rádios membros será utilizado
+//Mudar o radioNumber, não permitirndo que o número utilizado
+//para cada radio seja o mesmo.
+//Atualmente, o código dá suporte à comunicação entre dois(2) rádios
+bool radioNumber = RADIO_1;
+
+/* Configuração da conexão com a NodeMCU
+*O nome da REDE é o mesmo que número do radio(radioNumber) utilizado
+*/
+const char *ssid = "RADIO_1"; //RADIO_0 ou RADIO_1
 const char *password = "";
 ESP8266WebServer server(80);
 
 unsigned long previousMillis = 0;
-boolean ledStatus = false;
-
-#define INTERVAL 500
-#define PAYLOAD_SIZE 32
-
-byte addresses[][6] = {"1Node", "2Node"};
+int ledStatus = HIGH;
+#define INTERVAL 100
 
 void setup()
 {
 	pinMode(D4, OUTPUT);
 	Serial.begin(115200);
-	// Serial.println(F("RF24/examples/GettingStarted"));
-	Serial.println("\n\nConfiguring access point...");
-	// You can remove the password parameter if you want the AP to be open.
+
+	//Configuração do ponto de acesso wifi
+	Serial.println("\n\nConfigurando ponto de acesso");
 	WiFi.softAP(ssid, password);
 	IPAddress myIP = WiFi.softAPIP();
-	Serial.print("AP IP address: ");
+	Serial.print("Endereco de IP: ");
 	Serial.println(myIP);
+
+	//Configurção das rotas
 	server.on("/", handleRoot);
 	server.on("/req", handleRequestMsg);
+
 	server.begin();
-	Serial.println("HTTP server started");
+	Serial.println("Servidor iniciado!");
 
+	//Inicialização do rárdio
 	radio.begin();
-	// Set the PA Level low to prevent power supply related issues since this is a
-	// getting_started sketch, and the likelihood of close proximity of the devices. RF24_PA_MAX is default.
-	//radio.setPALevel(RF24_PA_LOW);
-
-	// Open a writing and reading pipe on each radio, with opposite addresses
+	//Abre o fluxo de entrada e saída de acordo com o radioNumber escolhido
 	if (radioNumber)
 	{
 		radio.openWritingPipe(addresses[1]);
@@ -63,17 +71,18 @@ void setup()
 	}
 	Serial.print("Radio Conectado: ");
 	Serial.println(radio.isChipConnected() ? "SIM" : "NAO");
-	// Start the radio listening for data
 	radio.setPayloadSize(PAYLOAD_SIZE);
+	//Coloca o rádio em modo ouvinte
 	radio.startListening();
 }
 
 void loop()
 {
+	server.handleClient();
 	char msgBytes[PAYLOAD_SIZE] = "";
 	if (radio.available())
 	{
-		radio.read(msgBytes, PAYLOAD_SIZE); // Get the payload
+		radio.read(msgBytes, PAYLOAD_SIZE);
 		if (strlen(msgBytes) > 0)
 		{
 			msgBytes[strlen(msgBytes)] = '\0';
@@ -90,22 +99,15 @@ void loop()
 	unsigned long currentMillis = millis();
 	if (currentMillis - previousMillis >= INTERVAL)
 	{
-		//ledStatus = !ledStatus;
-		digitalWrite(D4, HIGH);
+		ledStatus = !ledStatus;
+		digitalWrite(D4, ledStatus);
 		previousMillis = currentMillis;
 	}
-	server.handleClient();
 }
 
-/* Just a little test message.  Go to http://192.168.4.1 in a web browser
- * connected to this access point to see it.
- */
 void handleRoot()
 {
 	String msg = server.arg("msg");
-	//String page = "<html><head><title>Chat arduino</title></head><body><form method='GET'><input type='text'name='msg'id ='msg'/><input type='submit'name='send'id='send'/></form></body></html> ";
-	//server.send(200, "text/html", page);
-	//char msgBytes[32] = "";
 	if (msg.length() > 0)
 	{
 		char *msgBytes = (char *)malloc(sizeof(char) * (msg.length() + 1));
@@ -155,6 +157,5 @@ void sendRadioMsg(char *msg)
 	{
 		server.send(200, "", "");
 	}
-	delay(10);
 	radio.startListening(); // Now, continue listening
 }
