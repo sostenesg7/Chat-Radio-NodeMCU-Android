@@ -1,4 +1,4 @@
-## Projeto de chat via rádio frequência (2.4Ghz)
+## Projeto de chat via rádio frequência (2.4Ghz), utilizando NodeMCU e Android
 
 ### Hot links: _<a href="https://github.com/sostenesg7/Chat-Radio-NodeMCU-Android/wiki/Componentes-Utilizados">Componentes Utilizados</a>_, _<a href="https://github.com/sostenesg7/Chat-Radio-NodeMCU-Android/wiki/Imagens-do-projeto">Imagens do Projeto</a>_
 
@@ -21,5 +21,5 @@ O projeto em questão tem como objetivo dar suporte à troca de mensagens entre 
 
 
 **Para mais informações sobre os componentes aqui utilizados, visite:**
-<a href="Componentes-Utilizados">Componentes utilizados</a>
+<a href="https://github.com/sostenesg7/Chat-Radio-NodeMCU-Android/wiki/Componentes-Utilizados">Componentes utilizados</a>
 
