@@ -10,7 +10,8 @@ O projeto em questão tem como objetivo dar suporte à troca de mensagens entre 
 ## As tecnologias aqui utilizadas são:
 1. _**Aplicação Android**_
 2. _**NodeMCU - ESP2866**_
-3. _**Transceptor de rádio NRF24L01 (2.4Ghz)**_
+3. _**Transceptor de rádio NRF24L01 (2.4Ghz)**_ e
+4. _**Um pouco de gambiarra, claro, rsrsrs**_
 
 ## Os componentes adquiridos por compra e aqui utilizados são:
 1. _**Os itens 2 e 3 acima referidos**_
