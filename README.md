@@ -10,7 +10,7 @@ O projeto em questão tem como objetivo dar suporte à troca de mensagens entre 
 
 ## _**Esqumema de ligação dos pinos:**_
 
-![Esqumema de ligação dos pinos](https://raw.githubusercontent.com/sostenesg7/Chat-Radio-NodeMCU-Android/master/Circuit-Schematic/Chat-RADIO-Fritzing-Schematic.png)
+![Esquema de ligação dos pinos](https://raw.githubusercontent.com/sostenesg7/Chat-Radio-NodeMCU-Android/master/Circuit-Schematic/Chat-RADIO-Fritzing-Schematic.png)
 
 ## As tecnologias aqui utilizadas são:
 1. _**Aplicação Android**_
