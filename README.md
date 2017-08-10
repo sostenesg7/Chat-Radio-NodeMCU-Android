@@ -8,6 +8,9 @@ O projeto em questão tem como objetivo dar suporte à troca de mensagens entre 
 
 ![Fluxo de dados](https://3.bp.blogspot.com/-OKhQK2Snfv4/WYk1p44LeKI/AAAAAAAAFGc/n0w7XNj4kMMRqgA-KGGPyMHkkTG9beXVACLcBGAs/s1600/radio.jpg)
 
+## _**Esqumema de ligação dos pinos:**_
+
+![Esquema de ligação dos pinos](https://raw.githubusercontent.com/sostenesg7/Chat-Radio-NodeMCU-Android/master/Circuit-Schematic/Chat-RADIO-Fritzing-Schematic.png)
 
 ## As tecnologias aqui utilizadas são:
 1. _**Aplicação Android**_
