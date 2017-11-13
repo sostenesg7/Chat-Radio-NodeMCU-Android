@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lab1"
+    tools:context="com.dev.sostenesg7.chemistrygenius.PerguntasActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/imgFundoEstrelas"
+        android:layout_width="75dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/l1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPausa"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/ic_media_pause"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnEstrela"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@color/black_overlay"
+        android:backgroundTint="@color/cor_estrela"
+        android:scaleType="fitXY"
+        android:tint="@color/cor_estrela"
+        app:layout_constraintBottom_toBottomOf="@+id/imgFundoEstrelas"
+        app:layout_constraintStart_toStartOf="@+id/imgFundoEstrelas"
+        app:layout_constraintTop_toTopOf="@+id/imgFundoEstrelas"
+        app:srcCompat="@drawable/ic_star_white_24dp" />
+
+    <ImageButton
+        android:id="@+id/btnVida"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_favorite_white_24dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/btnPausa"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnVida2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_favorite_white_24dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/btnVida"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnVida3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_favorite_white_24dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/btnVida2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnVida4"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_favorite_white_24dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/btnVida3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnEstrela"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPergunta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black_overlay"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnResposta1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEstrela"
+        app:srcCompat="@drawable/back2" />
+
+    <TextView
+        android:id="@+id/txtPergunta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cantos_redondos"
+        android:fontFamily="@font/architects_daughter"
+        android:text=""
+        android:textAlignment="center"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPergunta"
+        app:layout_constraintEnd_toEndOf="@+id/imgPergunta"
+        app:layout_constraintStart_toStartOf="@+id/imgPergunta"
+        app:layout_constraintTop_toTopOf="@+id/imgPergunta" />
+
+    <ImageButton
+        android:id="@+id/btnResposta1"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/tubo_ensaio_azul_completo"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnResposta2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResposta1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/architects_daughter"
+        android:text="@string/txt_btn_modo_sobrevivencia"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnResposta2"
+        app:layout_constraintEnd_toEndOf="@+id/btnResposta1"
+        app:layout_constraintStart_toStartOf="@+id/btnResposta1"
+        app:layout_constraintTop_toTopOf="@+id/btnResposta1" />
+
+    <ImageButton
+        android:id="@+id/btnResposta2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/tubo_ensaio_roxo_completo"
+        app:layout_constraintBottom_toTopOf="@+id/btnResposta3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResposta2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/architects_daughter"
+        android:text="@string/txt_btn_modo_sobrevivencia"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnResposta2"
+        app:layout_constraintEnd_toEndOf="@+id/btnResposta2"
+        app:layout_constraintStart_toStartOf="@+id/btnResposta2"
+        app:layout_constraintTop_toTopOf="@+id/btnResposta2" />
+
+    <ImageButton
+        android:id="@+id/btnResposta3"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/tubo_ensaio_verde_completo"
+        app:layout_constraintBottom_toTopOf="@+id/btnResposta4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResposta3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/architects_daughter"
+        android:text="@string/txt_btn_modo_sobrevivencia"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnResposta3"
+        app:layout_constraintEnd_toEndOf="@+id/btnResposta3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnResposta3"
+        app:layout_constraintTop_toBottomOf="@+id/txtResposta2" />
+
+    <ImageButton
+        android:id="@+id/btnResposta4"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/tubo_ensaio_laranja_completo"
+        app:layout_constraintBottom_toTopOf="@+id/btnTempo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResposta4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/architects_daughter"
+        android:text="@string/txt_btn_modo_sobrevivencia"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnResposta4"
+        app:layout_constraintEnd_toEndOf="@+id/btnResposta4"
+        app:layout_constraintStart_toStartOf="@+id/btnResposta4"
+        app:layout_constraintTop_toTopOf="@+id/btnResposta4" />
+
+    <ImageButton
+        android:id="@+id/btnTempo"
+        android:layout_width="52dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ic_menu_white_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPular"
+        app:layout_constraintStart_toEndOf="@+id/btnTempo2" />
+
+    <ImageButton
+        android:id="@+id/btnTempo2"
+        android:layout_width="52dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ic_access_time_white_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPular"
+        android:layout_width="52dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_redo_white_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtEstrelas"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="2dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/imgFundoEstrelas"
+        app:layout_constraintEnd_toEndOf="@+id/imgFundoEstrelas"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnEstrela"
+        app:layout_constraintTop_toTopOf="@+id/imgFundoEstrelas"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

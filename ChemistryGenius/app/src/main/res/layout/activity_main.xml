@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dev.sostenesg7.chemistrygenius.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cientista"
+        tools:layout_editor_absoluteX="147dp">
+
+        <ImageButton
+            android:id="@+id/btnModoInfinito"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/black_overlay"
+            android:scaleType="fitXY"
+            android:tint="@color/black_overlay"
+            app:layout_constraintBottom_toTopOf="@+id/btnModoTempo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/tubo_ensaio_verde" />
+
+        <ImageButton
+            android:id="@+id/btnModoTempo"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/black_overlay"
+            android:scaleType="fitXY"
+            android:tint="@color/black_overlay"
+            app:layout_constraintBottom_toTopOf="@+id/btnInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/tubo_ensaio_roxo" />
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="52dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/ic_info_outline_white_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnMusica"
+            app:layout_constraintStart_toEndOf="@+id/btnSom" />
+
+        <ImageButton
+            android:id="@+id/btnSom"
+            android:layout_width="52dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/ic_volume_up_white_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnSom2"
+            android:layout_width="52dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/tempo"
+            app:layout_constraintBottom_toBottomOf="@+id/btnModoTempo"
+            app:layout_constraintEnd_toEndOf="@+id/imgEfeitoTuboEnsaioTempo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnModoTempo"
+            app:layout_constraintTop_toTopOf="@+id/btnModoTempo" />
+
+        <ImageButton
+            android:id="@+id/btnSom3"
+            android:layout_width="52dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/infinito"
+            app:layout_constraintBottom_toBottomOf="@+id/btnModoInfinito"
+            app:layout_constraintEnd_toEndOf="@+id/imgEfeitoTuboEnsaioTempo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnModoTempo"
+            app:layout_constraintTop_toTopOf="@+id/btnModoInfinito"
+            app:layout_constraintVertical_bias="0.333" />
+
+        <ImageButton
+            android:id="@+id/btnMusica"
+            android:layout_width="52dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_music_note_white_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnEstrela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/black_overlay"
+            android:scaleType="fitXY"
+            android:tint="@color/cor_estrela"
+            app:layout_constraintBottom_toTopOf="@+id/txtBtnModoInfinito"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.025"
+            app:srcCompat="@drawable/ic_star_white_24dp" />
+
+        <TextView
+            android:id="@+id/txtBtnModoInfinito"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/architects_daughter"
+            android:text="@string/txt_btn_modo_sobrevivencia"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnModoTempo"
+            app:layout_constraintEnd_toEndOf="@+id/btnModoInfinito"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="@+id/btnModoInfinito"
+            app:layout_constraintTop_toTopOf="@+id/btnModoInfinito"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/architects_daughter"
+            android:text="@string/txt_btn_modo_tempo"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnModoTempo"
+            app:layout_constraintEnd_toEndOf="@+id/btnModoTempo"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="@+id/btnModoTempo"
+            app:layout_constraintTop_toTopOf="@+id/btnModoTempo"
+            app:layout_constraintVertical_bias="0.36" />
+
+        <ImageView
+            android:id="@+id/imgEfeitoTuboEnsaioEsquerda"
+            android:layout_width="29dp"
+            android:layout_height="79dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/bolha_1"
+            android:tint="@android:color/holo_red_light"
+            app:layout_constraintBottom_toTopOf="@+id/btnModoInfinito"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEstrela"
+            app:layout_constraintVertical_bias="0.281" />
+
+        <ImageView
+            android:id="@+id/imgEfeitoTuboEnsaioSobre"
+            android:layout_width="29dp"
+            android:layout_height="79dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:tint="#0c826a"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/btnModoInfinito"
+            app:layout_constraintEnd_toEndOf="@+id/btnModoInfinito"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/btnModoInfinito"
+            app:layout_constraintTop_toTopOf="@+id/btnModoInfinito"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/bolha_1" />
+
+        <ImageView
+            android:id="@+id/imgEfeitoTuboEnsaioDireita"
+            android:layout_width="29dp"
+            android:layout_height="79dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:tint="@android:color/holo_blue_bright"
+            app:layout_constraintBottom_toTopOf="@+id/btnModoInfinito"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            app:layout_constraintStart_toEndOf="@+id/imgEfeitoTuboEnsaioEsquerda"
+            app:layout_constraintTop_toBottomOf="@+id/btnEstrela"
+            app:layout_constraintVertical_bias="0.281"
+            app:srcCompat="@drawable/bolha_1" />
+
+        <ImageView
+            android:id="@+id/imgEfeitoTuboEnsaioTempo"
+            android:layout_width="29dp"
+            android:layout_height="79dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:tint="@android:color/holo_purple"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/btnModoTempo"
+            app:layout_constraintEnd_toEndOf="@+id/btnModoTempo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/btnModoTempo"
+            app:layout_constraintTop_toTopOf="@+id/btnModoTempo"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/bolha_1" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
